@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>cart</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/tostylmou.css"  type="text/css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"/>
+        <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+        <script src="js/toscriptmou.js"></script>
+    </head>
+
+    <body onload="showCart()">    
+
+        <header class="header">
+            <h1 class="header_text">Wiki-Shop</h1>
+        </header>
+
+        <main>
+          <h1 class="cart_Header">My cart</h1>
+          <section class="categories_div" id="cost_div">
+            <script type="text/x-handlebars-template" id="template">
+              <p>{{title}} {{cost}}€ {{quantity}} piece(s)</p>
+              <hr class="cost_hr">
+            </script>
+            <div id="output"></div>
+            <p id="totalCost"></p>
+          </section>
+        </main>
+
+        <footer>
+            <p class="header_footer">@2022 Wiki-Shop</p>
+            <section class="logos">
+          <a href="https://www.facebook.com" class="logo">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://twitter.com" class="logo">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="https://instagram.com" class="logo">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://www.linkedin.com" class="logo">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="https://www.youtube.com" class="logo">
+            <i class="fab fa-youtube"></i>
+          </a>
+            </section>
+        </footer>  
+
+    </body>
+</html>

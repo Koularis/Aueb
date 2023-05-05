@@ -1,0 +1,269 @@
+*,
+::before,
+::after {
+  padding: 0;
+  margin: 0;
+}
+
+html{
+  box-sizing: border-box;
+}
+
+.header{
+    background-color: #ffe082;
+    height:5rem;
+    width: 100%;
+    text-align: center;
+}
+
+.header_text{
+    padding-top:1rem;
+    font-size: 2.3rem;
+    color:#093934;
+}
+
+body{
+    background-color:#e7e7e7 ;
+    color:#093934;
+}
+
+footer{
+  margin-top: 4rem;
+  bottom:0;
+  display: grid;             
+  background-color: #ffe082;
+  color:#093934 ;
+  width:100%;
+  text-align: center;
+}
+
+.header_footer{
+  font-size: 2.5rem;
+  font-weight: bold;      
+  text-align: center;
+  font-family:Verdana, sans-serif;
+}
+
+.logos{
+  display:grid;
+  font-size: 3rem;
+  grid-template-columns: repeat(5, 1fr);
+  grid-auto-flow: column;
+  align-items: center;        
+  margin-left:auto;
+  margin-right:auto;
+  column-gap:3rem;
+  margin-top: 1rem;
+}
+
+.logo{
+  color:#093934;       
+} 
+
+.logo:hover{
+  color:#126961;
+  transform: scale(1.05);       
+}
+
+/* Index */
+
+.about_us{
+  width:70%;
+  margin:2rem auto;
+  font-size:1.4rem;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+
+.categories_div{
+    width:50%;
+    min-height:60rem;
+    background-color: white;
+    text-align: center;
+    margin:2rem auto;
+    font-size: 3rem;
+    border-radius: 0.5rem;
+    padding: 0.5rem 0 2rem 0;
+    
+}
+
+.product_item{
+  border:solid 0.3rem #093934;
+  border-radius: 0.5rem;
+  width:50%;
+  margin:1rem auto;
+}
+
+.categories_p{
+  color: #093934;
+  font-size:3rem;
+  margin: 3rem 0 2rem 0;
+}
+
+
+.index_button{
+  text-align: center;
+  color:#e7e7e7;
+  background-color: #093934;
+  border:none;
+  border-radius: 0.5rem;
+  padding:1rem;
+  font-size: 1.1rem;
+}
+
+.index_button:hover{
+  background-color: #126961;
+  transform: scale(1.08);
+}
+
+
+/* Categories */
+.dropbtn {
+  background-color: #093934;
+  color: #e7e7e7;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  margin: 2rem 0rem 0rem 7rem;
+  border-radius: 0.3rem;
+  width:8rem;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #0e4d47;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  margin-left:7rem;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+
+.product_item{
+  border:0.2rem solid #093934;
+  margin:1rem auto;
+  width:25rem;
+  border-radius: 0.5rem;
+
+}
+
+.categories_div img{
+  height:25rem;
+  weight:25rem;
+  vertical-align: middle;
+}
+
+.categories_div p{
+  font-size: 2.2rem;
+  margin:0.5rem auto;
+  font-family:'Times New Roman', Times, serif
+}
+
+.cost{
+  color:#e20b0b;
+}
+
+.add_product{
+  border-radius: 0.5rem;
+  background-color: #093934;
+  padding:0.5rem 1rem;
+  border:none;
+  color:white;
+  margin-bottom:1rem;
+}
+
+.login_area{
+  position:absolute;
+  margin-left: 90rem;
+  margin-top: 4.5rem;
+}
+
+.login_input{
+  border-radius: 0.2rem;
+}
+
+.login_button{
+  border-radius: 0.3rem;
+  background-color: #093934;
+  padding:0.3rem 0.5rem;
+  border:none;
+  color:white;
+}
+
+#login{
+  position: absolute;
+  font-weight: bold;
+}
+
+#showsize{
+  margin-left: 10.5rem;
+  margin-top: 1rem;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.cart_link{
+  font-weight: bold;
+  position: absolute;
+  margin: -4.0rem 0rem 0rem 1rem;
+  padding: 1rem;
+  background-color: #093934;
+  color: #ffe082;
+  border-radius: 0.5rem;
+}
+
+.cost_hr{
+  width: 55%;
+  margin: 3rem auto;
+  background-color: #093934;
+  height: 0.35rem;
+  border-radius: 0.5rem;
+}
+
+#totalCost{
+  color: rgba(170, 32, 32, 0.945);
+}
+
+#cost_div{
+  min-height: 40rem;
+  width: 50%;
+}
+
+#cartSize{
+  margin-top: 2rem;
+}
+
+#cartSize p{
+  font-weight: bold;
+}
+
+.cart_Header{
+  font-size:5rem;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color:#093934;
+  margin:3rem auto;
+  text-align: center;
+}

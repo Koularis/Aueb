@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Categories</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/tostylmou.css"  type="text/css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"/>
+        <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+        <script src="js/toscriptmou.js"></script>
+    </head>
+
+    <body onload="showAllProducts()">
+
+        <header class="header">
+            <h1 class="header_text">Wiki-Shop</h1>
+        </header>
+        <main>
+          <!-- <button onclick="check()" class=login_button id="onlogin">My cart</button> -->
+          <script type="text/x-handlebars-template" id="template3">
+            <a href="cart.html?username={{username}}&sessionId={{sessionId}}"><p class="cart_link">My cart</p></a>
+           </script>
+           <div id="output3"></div>
+          <section class="login_area">
+            <input type="text" id="username" class="login_input">
+            <input type="password" id="password" class="login_input">
+            <button onclick="login()" class="login_button">Login</button>
+            <p id="login">  </p>
+          </section>
+          <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn">Filters</button>
+            <div id="myDropdown" class="dropdown-content">
+                <p>Select a sub-category</p>
+              <form>
+                <input type="radio" name="sub-category" value="0" id="0" onclick="scrape(0)">
+                 <label for="0"> All </label><br>
+                <script type="text/x-handlebars-template" id="template2">
+                 <input type="radio" name="sub-category" value="subcategory_id" id="subcategory_id" onclick="scrape('{{id}}')">
+                 <label for="subcategory_id"> {{title}} </label><br>
+                </script>
+                <div id="output2"></div>
+              </form>
+            </div>
+            <br>
+            <button onclick="showCartSize()" class="dropbtn" id="cartSize">Show cart size</button>
+            <p id="showsize"></p>
+        </div>
+        <div class="categories_div">
+          <script type="text/x-handlebars-template" id="template">
+              <div class="product_item">
+              <p>{{title}}</p>
+              <img src="{{image}}">
+              <p>id: {{id}}</p>
+              <p class="cost">{{cost}}€</p>
+              <button class="add_product" onclick="addToCart('{{id}}')">Add to cart</button>
+              <p id="added {{id}}"></p>
+              </div>
+          </script>
+          <div id="output"></div>
+        </div>
+            <script>
+              async function myFunction() {
+                document.getElementById("myDropdown").classList.toggle("show");
+                var template = Handlebars.compile(document.querySelector("#template2").innerHTML);
+                const urlParams = new URLSearchParams(window.location.search)
+                const param = urlParams.get("categoryId")
+                const response = await fetch("https://wiki-shop.onrender.com/categories/" + param + "/subcategories")
+                const data = await response.json()
+                var filled = template(data[0])
+                for (let i = 0; i < data.length-1; i++) {
+                  filled += template(data[i+1])
+                }
+                document.querySelector("#output2").innerHTML = filled
+              }
+
+              window.onclick = function(event) {
+              if (!event.target.matches('.dropbtn')) {
+                  var dropdowns = document.getElementsByClassName("dropdown-content");
+                  var i;
+                  for (i = 0; i < dropdowns.length; i++) {
+                  var openDropdown = dropdowns[i];
+                  if (openDropdown.classList.contains('show')) {
+                      openDropdown.classList.remove('show');
+                  }
+                  }
+              }
+              }
+            </script>
+        </main>
+
+        <footer>
+            <p class="header_footer">@2022 Wiki-Shop</p>
+            <section class="logos">
+          <a href="https://www.facebook.com" class="logo">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://twitter.com" class="logo">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="https://instagram.com" class="logo">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://www.linkedin.com" class="logo">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="https://www.youtube.com" class="logo">
+            <i class="fab fa-youtube"></i>
+          </a>
+        </div>
+    </body>
+
+    
+</html> 

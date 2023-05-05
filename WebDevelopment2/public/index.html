@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>index</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/tostylmou.css"  type="text/css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"/>
+        <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+        <script src="js/toscriptmou.js"></script>
+    </head>
+
+    <body>    
+
+        <header class="header">
+            <h1 class="header_text">Wiki-Shop</h1>
+        </header>
+
+        <main>
+            <section class="about_us">
+                <p class="about_us">Welcome to Our E-Shop!
+                We are a well known business that has been selling high-quality products online for over 10 years. Our mission is to provide our customers with exceptional service and the best possible shopping experience.               
+                At Our E-Shop, you will find a wide selection of products in categories such as home goods, electronics, clothing, and more. We strive to offer the latest trends and top brands at competitive prices.                
+                Our team is made up of experts in their respective fields, with a passion for customer satisfaction. We are always available to answer any questions you may have and help you find the perfect product.               
+                We are proud to have received numerous awards for our outstanding service and selection. We have also formed partnerships with trusted companies in the industry.                
+                Thank you for choosing Our E-Shop for all your shopping needs. We look forward to serving you!               
+                Contact Us:
+                Phone: 555-555-5555
+                Email: info@our-e-shop.com
+                Address: 123 Main Street, Anytown, USA 99999
+                Press the button below to see all categories:</p>
+                <button onclick="fill_template()" class="index_button">Show</button>
+            </section>
+
+            <div class="categories_div">
+              <script type="text/x-handlebars-template" id="template">
+                <div class="product_item">
+                <p class="categories_p">{{id}} {{title}}</p>
+                <a href="category.html?categoryId={{id}}"><img src="{{img_url}}"></a>
+                </div>
+            </script>
+            <div id="output"></div>
+            </div>
+        </main>
+
+        <footer>
+            <p class="header_footer">@2022 Wiki-Shop</p>
+            <section class="logos">
+          <a href="https://www.facebook.com" class="logo">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://twitter.com" class="logo">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="https://instagram.com" class="logo">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://www.linkedin.com" class="logo">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="https://www.youtube.com" class="logo">
+            <i class="fab fa-youtube"></i>
+          </a>
+            </section>
+        </footer>  
+
+    </body>
+</html>
