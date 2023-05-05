@@ -1,0 +1,872 @@
+*,
+::before,
+::after {
+  padding: 0;
+  margin: 0;
+}
+
+html{
+  box-sizing: border-box;
+}
+
+img{
+    width: 15rem;
+    height: 12rem;
+}
+
+
+.header_h1{
+    font-family:Verdana, sans-serif;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom:1rem;           /* Γενικός κανόνας για headers */
+    margin-top:1rem;
+}
+
+p{
+  font-size: 1.5rem;
+  font-family: sans-serif;      /* Γενικός κανόνας για παραγράφους */
+  text-align: center;
+}
+
+.menu_ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;      /* Η λίστα στο μενού περιήγησης */
+    display: inline-block;
+    text-align: left;
+  }
+  
+  .menu_li { 
+    float: left;
+    font-size: 1.2rem;              /* Τα στοιχεία της παραπάνω λίστας */
+    font-family:Georgia, 'Times New Roman', Times, serif;
+  }
+
+  
+  .menu_li a {
+    display: block;
+    text-align: center;
+    padding: 0.7rem 0.9rem;      /* Μορφοποίηση των λίνκ του μενου */
+    text-decoration: none;
+  }
+  
+  .menu_li a:hover {
+    background-color: #8c55ed;  /* Χρώμα όταν κάνεις hover στο μενού */
+  }
+
+.header{
+    padding:0.7rem;
+    background-color:#B388FF;
+    color:#4527A0;                  /* Μορφοποί ηση του main header και του μενού */
+    text-align: center;
+    margin:-1rem;
+    width:100%;
+    top:0;
+    position: fixed;
+    margin-bottom:10rem;
+}
+
+.main_div{
+    width:55%;
+    margin-top:13rem;
+    margin-right: auto;       /* div που χρησιμοποιείται σε σελίδες που δεν έχουν grid ή flexbox */
+    margin-left: auto;
+    text-align: center;
+}
+
+
+footer{
+    margin-top: 4rem;
+    bottom:0;
+    display: grid;              /* Μορφοποίηση του footer όλων των σε΄λίδων */
+    background-color: #B388FF;
+    color:#4527A0 ;
+    width:100%;
+    text-align: center;
+}
+
+.header_footer{
+  font-size: 2.5rem;
+  font-weight: bold;      /* Το header της εταιρείας που βρίσκεται στο footer */
+  text-align: center;
+  font-family:Verdana, sans-serif;
+}
+
+.logos{
+  display:grid;
+  font-size: 3rem;
+  grid-template-columns: repeat(5, 1fr);
+  grid-auto-flow: column;
+  align-items: center;        /* το grid που χρησιμοποιείται για την αναπαράσταση των logo */
+  margin-left:auto;
+  margin-right:auto;
+  column-gap:3rem;
+  margin-top: 1rem;
+}
+
+.logo{
+  color:#4527A0;       /* χρωματισμός των logo */
+} 
+
+.logo:hover{
+  color:#8c55ed;       /* >> στο hover */
+}
+
+
+/* Index */
+
+.container{
+  display:grid;
+  grid-template-columns: 1fr 2fr 1fr;  /* το grid που χρησιμοποιείται στην index σελίδα */
+  column-gap:2rem;
+}
+
+
+#ad1{
+  display:grid;
+  grid-column: 1/2;          /* Τοποθέτηση της 1ης διαφήμισης */
+  grid-row:1/2;
+  margin-left: 8rem;
+}
+
+#ad2{
+  display:grid;            
+  grid-column: 3/4;              /* Τοποθέτηση της 2ης διαφήμισης */
+  grid-row:1/2;
+}
+
+.spec-product{
+  margin-top: 8rem;
+  display: grid;
+  grid-column: 2/3;            /* Τοποθέτηση των υπόλοιπων στοιχείων της σελίδας που αφορούν το special offer */
+  grid-row:1/2;
+  text-align: center;
+}
+
+
+
+.info p{
+  font-size: 1.5rem; 
+  font-family:sans-serif;     /* μορφοποίηση του κειμένου του index */
+  margin-top: 3rem;
+}
+
+.spec-off-header{
+    margin-top:3.5rem;
+    font-size: 2.2rem;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;     /* μορφοποίηση του header του special offer */
+    text-align: center;
+    color:#4527A0;
+}
+
+.spec-off-img{
+  margin-top:3.5rem;
+  margin-bottom:3rem;
+  width:13rem;
+  height:13rem;
+  padding: 5px;                   /* μορφοποίηση του header του special img */
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  border:solid 3px #4527A0;
+  border-radius: 0.5rem;
+}
+
+
+.spec-off-btn {
+  margin-top:1.3rem;
+  background-image: linear-gradient(92.88deg, #455EB5 9.16%, #5643CC 43.89%, #673FD7 64.72%);
+  border-radius: 8px;
+  border-style: none;
+  box-sizing: border-box;     /* μορφοποίηση του header του special button*/
+  color: #FFFFFF;
+  font-family: "Inter UI","SF Pro Display","Segoe UI","Open Sans","Helvetica Neue",sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  height: 4rem;
+  padding: 0 1.6rem;
+  text-align: center;
+  text-shadow: rgba(0, 0, 0, 0.25) 0 3px 8px;
+}
+
+
+.ad{
+  width:17rem;
+  height:35rem;                   /* Γενική μορφοποίηση των ads */
+  margin-top: 16rem;
+  box-shadow: 15px 15px rgba(180, 136, 255,.15);
+  border-radius: 20px;
+}
+
+.kobax{
+  font-size:1.35rem;    /* Μορφοποίηση του κείμενου του προϊόντος για να μεταβείς στη σελίδα του */
+  color:#4527A0;
+}
+
+.kobax:hover{
+  color:#B388FF;   /* >> οτάν κανεις hover */
+}
+
+
+
+/* About us */
+
+.about_us_container{
+  display:grid;
+  grid-template-columns: 1fr 1fr;      /* Grid για την about us σελίδα */
+  column-gap:5rem;
+  margin:10rem auto 7rem auto;
+  width:75%;
+}
+
+.koba_info{
+  display: grid;
+  grid-column: 1/3;                 /* Τοποθέτηση της πληροφορίας για την εταιρεία */
+  grid-row: 1/2;
+  width:90%;
+  margin:0 auto 3rem auto;
+}
+
+.founders_bold{
+  font-size:2rem;
+  font-weight: bold;          /* Μορφοποίηση του header για τους ιδρυτές */
+  color:#4527A0;
+  margin:1.2rem 0 1rem 0;
+}
+
+.founder_hr{
+  width:13rem;
+  color: #4527A0;
+  height:0.3rem;
+  border:none;                        /* Μορφοποίηση του hr κάτω από το ιδρυτές */
+  background-color: #4527A0;
+  margin-top: -1rem;
+  margin:0 auto 0 auto;
+}
+
+.founder_img{
+  width:21rem;
+  height:18rem;
+  border-radius: 0.4rem;        /* Μορφοποίηση των εικόνων των ιδρυτών */
+  box-shadow: 15px 15px rgba(140, 78, 247, 0.15);
+}
+
+  .founder_pic{ 
+    margin:2rem auto 0 auto;     /* Βοηθητικό για την τοποθέτηση στις μεγάλες διαστάσεις */
+  }
+
+.founder_info{
+  width:70%;
+  margin:0 auto 0 auto;
+  text-align:center;
+  background-color: #e4d6fc ;       /* Πληροφ΄ορίες για τους ιδρυτές */
+  padding:1.8rem;
+  border-radius: 1rem;
+  border:0.15rem solid #4527A0;
+}
+
+
+.xouliaras{
+  display:grid;
+  grid-column: 1/2;  /* Τοποθέτηση των στοιχείων του 1ου ιδρυτή */
+  grid-row:2/3;
+}
+
+.vousvouKYS{
+  display:grid;
+  grid-column: 2/3;  /* Τοποθέτηση των στοιχείων του 2ου ιδρυτή */
+  grid-row:2/3;
+}
+
+
+
+/* Contact */
+.contact_us{
+  font-weight: bold;
+  color:#4527A0;    /* Μορφοποίηση του παρακαλώ επικοινωνήστε μαζί μας */
+  font-size: 2rem ;
+}
+
+#contact_div{
+  width:30%;      /* Το div στο οποίο βρίσκεται η φόρμα */
+}
+
+fieldset{
+  border:none;
+  padding:1.8rem 0;    /* Μορφοποίηση των fieldset */
+  border-bottom: solid #4527A0;
+}
+
+legend{
+  font-size:1.5rem;
+  margin-top:1.5rem;   /* Μορφοποίηση των legend */
+  margin-bottom: 1rem;
+}
+
+fieldset:last-of-type {
+  border-bottom: none;     /* Μορφοποίηση του τελευταίου στοιχείου των fieldset*/
+  margin:1.2rem 0;
+}
+
+label{
+  margin:0.02rem 0; 
+  display: block;       /* Μορφοποίηση των label */
+  font-size:1.3rem;
+  font-family: sans-serif;
+}
+
+input{
+  background-color: #d3d3d3;
+  border:none;
+  border-radius: 0.3rem;
+  padding:0.3rem;      /* Μορφοποίηση των input */
+  margin-top:0.5rem;
+  margin-bottom: 1rem;
+}
+
+
+
+.send{
+  margin-bottom: 2rem;
+  padding:0.5rem 1rem;
+  background-color: #B388FF;
+  border:solid #4527A0 0.1rem;  /* Μορφοποίηση του κουμπιού για την αποστολή */
+  font-size: 1.1rem;
+  color:#4527A0;
+  font-weight: bold;
+}
+
+#question{
+    min-height: 4em;
+    margin-top:0.7rem;      /* Μορφοποίηση του textarea που πληκτρολογούμε την ερώτηση μου */
+    width:18rem;
+    margin:0.7 auto 0 auto;
+}
+
+/* Koba-X Product */
+
+.genx_container{
+  display:grid;
+  grid-template-columns: 1fr 1fr;   /* Grid για το προϊόν μας */
+  column-gap: 6rem;
+  margin:0rem 0 7rem 0;
+}
+
+.path{
+  display:grid;
+  grid-column: 1/2;  /* Τοποθέτηση του μονοπατιού για να φτάσουμε στο προϊόν */
+  grid-row: 1/2;
+  margin-top: 9rem;
+  margin-bottom: -8rem;
+}
+
+.genx_p1{
+  display:grid;
+  grid-column: 1/2;     /* Τοποθέτηση του 1ου item του προϊόντος */
+  grid-row:2/3;  
+  margin:6rem 0 5rem 6rem;
+  text-align: center; 
+}
+
+.genx_p2{
+  display:grid;
+  grid-column: 2/3;     /* Τοποθέτηση του 2ου item του προϊόντος */
+  grid-row:2/3;
+  text-align:center;
+  margin:22rem 20rem 5rem 8rem;
+}
+
+.koba_details{
+  width:70%;
+  background-color:#e4d6fc;
+  margin:0 auto 0 auto;
+  padding:1.2rem;        /* Μορφοποίηση της πληροφορίας για το προϊόν */
+  border-radius: 0.5rem;
+  font-size: 1.5rem;
+  text-align: left;
+}
+
+.path_part{
+  color:#4527A0;      /* Χρωματισμός των μερων του path */
+}
+
+.path_part:hover{
+  color:#B388FF;  /* >> όταν κάνεις hover */
+}
+
+
+
+.koba_img{
+  width:13rem;
+  height:13rem;   /* Μορφοποίηση της εικόνας με το προϊόν */
+  margin:0 auto 0 auto;
+}
+
+.code{
+  margin:1rem 0;     /* Τοποθέτηση του κωδικού προϊόντος */
+}
+
+.price_header{
+  font-weight: bold;  /* Μορφοποίηση του κειμένου πάνω απο την τιμή του ("Τιμή:") */
+  font-size: 1.7rem;
+}
+
+.price{
+  color:#f30c2b;    /* Μορφοποίηση της τιμής */
+  margin:1rem 0 0 0;
+}
+
+.koba_header{
+  font-weight: bold;
+  color:#4527A0;    /* Μορφοποίηση των header της σελίδας */
+  font-size: 1.7rem;
+}
+
+.spec_list ul{
+  background-color: #e4d6fc;
+  padding:0.8rem 1.2rem 0.8rem 1.2rem;  /* Μορφοποίηση της λίστας με τα χαρακτηριστικά του προϊόντος */
+  border-radius: 0.5rem;
+}
+
+.spec_list li{
+  font-size:1.4rem;
+  margin:1.4rem 0 0 1rem;   /* Μορφοποίηση των στοιχείων της λίστας με τα χαρακτηριστικά του προϊόντος */
+  list-style-type:disc;
+  text-align: left;
+}
+
+.wishlist{
+  background-color: #00E676;
+  color:white;
+  font-size: 1.5rem;
+  border:none;        /* Μορφοποίηση του κουμπιού για προσθηκη */
+  border-radius: 0.2rem;
+  width:80%;
+  margin:0 auto 0 auto;
+  height:70%;
+}
+
+.wishlist:hover{
+  background-color: #4527A0;  /* >> οταν κάνεις hover */
+}
+
+/* Categories */
+.see_categories{
+  margin-top: 13rem;
+  text-align: center;
+  color: #4527A0;         /* Μορφοποίηση του κειμένου στις σελίδες με τις κατηγορίες */
+  font-size:3rem;
+}
+
+
+.categories_flex{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;          /* Flexbox που περιέχει τις κατηγορίες */
+  justify-content: center;  
+  margin:8rem 0;
+  gap:3rem;
+}
+
+.categories_flex > figure{
+  border:0.15rem solid #c9acfa;
+  font-size:1.5rem;
+  text-align: center;
+  border-radius: 0.2rem;              /* Μορφοποίηση των figures μεσα στο flexbox */
+  padding:2rem 2rem 0.3rem 2rem;
+  max-width: 23rem;
+}
+
+
+
+.categories_flex img{
+  width:23rem;      /* Μορφοποίηση των img μεσα στο flexbox */
+  height:18rem;
+}
+
+.categories_flex a{
+  text-decoration: none;
+  color:#4527A0;      /* Μορφοποίηση των a μεσα στο flexbox */
+  font-weight: bold;
+}
+
+.categories_flex a:hover{
+  text-decoration: none;  /* Μορφοποίηση των a μεσα στο flexbox όταν κάνεις hover */
+  color:#8c55ed;
+}
+
+.categories_flex figcaption{
+  margin:3rem 1rem;   /* Μορφοποίηση των figcaption μεσα στο flexbox */
+}
+
+/* SubCategories */
+
+.category_header{
+  font-weight: bold;
+  font-size:2.5rem;     /* Μορφοποίηση του header των υποκατηγοριών */
+  color:#4527A0;
+}
+
+.product_name{
+  display:grid;   
+  grid-row:1/2;   /* Τοπο΄θέτηση του ονόματος του προϊόντος μέσα στο grid*/
+  grid-column: 1/3;
+}
+
+.path_categories{
+  margin:10rem 90rem 0 0;     /* To μονοπάτι που ακολουθήσαμε για να φτάσουμε στην σελίδα */
+}
+
+.product_grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;  /* Το grid που έχουμε μ΄έσα στα items του grid */
+  row-gap: 0.5rem;
+  align-items: center;
+}
+
+.code_subcat{
+  display:grid;
+  column-gap: 1/2;
+  grid-row:2/3;               /* Τοποθέτηση του κωδικού προϊόντος μέσα στο item του grid */
+  font-size:1.3rem;
+  margin-left:2rem;
+  color:rgba(121, 120, 120, 0.87);
+}
+
+.price_subcat{
+  color:#f30c2b;
+  display:grid;
+  column-gap:2/3;     /* Τοποθέτηση της τιμής προϊόντος μέσα στο item του grid */
+  grid-row:2/3;
+  font-size:1.3rem;
+  margin-right:2rem;
+}
+
+.button_subcat{
+  background-color: #00E676;
+  color:white;
+  font-size: 1.5rem;
+  border:none;
+  border-radius: 0.2rem;           /* Τοποθέτηση της τιμής προϊόντος μέσα στο item του grid */
+  margin:0 auto 0 auto;
+  padding:0.7rem 2rem 0.7rem 2rem;
+  margin-top:1rem;
+  display: grid;
+  grid-column: 1/3;
+  grid-row:3/4;
+}
+
+.button_subcat:hover{
+  background-color: #4527A0; /* Μορφοποίηση του παραπάνω κουμπιού όταν κάνεις hover */
+}
+
+/* Media Queries */
+@media (max-width:1000px){
+  
+  .ad{
+    width:15rem;
+    height:35rem;
+    margin-top: 27rem;
+    box-shadow: none;
+  }
+
+  #ad1{
+    margin-left:1rem;
+  }
+
+  #ad2{
+    margin-right:1rem;
+  }
+
+  footer{
+    margin-top: 8rem;
+  }
+
+  .spec-product{
+    grid-column: 1/4;
+    padding: 0 2rem;
+  }
+
+  .spec-off-header{
+    margin-top: -1rem;
+  }
+
+  .spec-off-img{
+    margin-top: 10rem;
+  }
+
+  .about_us_container{
+    display:block;
+    margin:10rem auto 0 auto;
+    width:100%;
+  }
+  
+  .founder_info{
+    width:60%;  
+    font-size: 2rem;
+  }
+
+  .xouliaras{
+    margin-top:-2rem;
+  }
+
+  .categories_flex figure{
+    width:15rem;
+  }
+  
+  .categories_flex img {
+    width:15rem;
+    height:10rem;
+ }
+
+  .categories_flex figcaption{
+    width:50%;
+    margin:1rem auto 1rem auto;
+  }
+
+
+  .see_categories{
+    font-size: 3rem;
+    margin-bottom: -2.5rem;
+  }
+
+  .category_header{
+    margin-bottom:-5rem;
+  }
+
+  .path_categories{
+    display: block;
+    margin:10rem 0 2rem 0;
+  }
+
+
+  .product_grid{
+    display:block;
+  }
+
+  .product_name{
+    font-size: 1.2rem;
+    display: block;
+  }
+
+  .price_subcat{
+    font-size:1rem;
+    display:block;
+    margin:0.3rem 0 0 0;
+  }
+
+  .code_subcat{
+    font-size:0.8rem;
+    display: block;
+    margin:0.3rem 0 0 0;
+    font-size: 1.2rem;
+  }
+
+  .button_subcat{
+    display:block;
+    margin:1 0;
+    padding:0.4rem;
+    font-size:1.2rem;
+  }
+
+    .genx_container{
+    display:block;
+  }
+
+  .spec-off-header{ 
+    margin-bottom: 2rem;
+  }
+  
+  .code{
+    margin-bottom: 1.5rem;
+  }
+
+  .genx_p1{
+    display:block;
+    margin:10rem 0 0 0;  
+  }
+
+  .koba_header{
+    margin-bottom: 1rem;
+  }
+
+  .genx_p2{
+    display:block;
+    margin:0;
+    width:70%;
+    margin:5rem auto 0 auto;
+  }
+
+  .wishlist{
+    margin-top: 2rem;
+    padding: 0.5rem;
+  }
+
+  .spec_list{
+    margin-top: 5rem;
+  }
+  
+  .question{
+
+  }
+
+  #contact_div{
+    width:60%;
+  }
+
+  .send{
+    margin-bottom: -7rem;
+  }
+
+}
+
+@media (max-width:550px){
+
+  .menu_li{
+    font-size: 0.9rem;
+  }
+
+  .ad{
+    width:0;
+    height:0;
+  }
+  
+  .container{
+    display:block;
+    margin-top:-55rem;
+  }
+
+  .spec-off-header{
+    margin-top:4rem;
+    margin-bottom: -6rem;
+  }
+
+  .spec-off-img{
+    margin-top: 2rem;
+  }
+
+  footer{
+    margin-top:3rem;
+  }
+  
+  .about_us_container{
+    display:block;
+    margin:10rem auto 0 auto;
+    width:100%;
+  }
+
+  .koba_info p{
+    font-size: 1.2rem;
+  }
+
+  .founder_img{
+    box-shadow:none;
+    margin:1.5rem auto 0 auto;
+  }
+
+  .founders_bold{
+    font-style: bold;
+    font-size: 2rem;
+  }
+  
+  .xouliaras{
+    display:block;
+    text-align: center;
+  }
+
+  .vousvouKYS{
+    display:block;
+    text-align: center;
+    align-items: center;
+  }
+
+  .founder_info{
+    font-size: 1.3rem;
+    border: none;
+  }
+
+  .categories_flex{
+    row-gap: 3.5rem;
+    margin-bottom: -1rem;
+  }
+
+  .categories_flex figure{
+    text-align: center;
+    padding:0;
+    width:10rem;
+    padding-top: 1rem;
+  }
+
+  .categories_flex img {
+    width:8rem;
+    height:8rem;
+
+  }
+
+  .categories_flex figcaption{
+    margin:1rem auto 1rem auto;
+    font-size: 1rem;
+  }
+
+  .see_categories{
+    font-size: 2rem;
+    margin-bottom: -4rem;
+    margin-top:10rem;
+  }
+
+  .category_header{
+    margin-bottom:-5rem;
+  }
+
+  .path_categories{
+    display: block;
+    margin:10rem 0 2rem 0;
+  }
+
+
+  .product_grid{
+    display:block;
+  }
+
+  .product_name{
+    font-size: 0.8rem;
+    display: block;
+  }
+
+  .price_subcat{
+    font-size:0.6rem;
+    display: block;
+    margin:0.3rem 0 0 0;
+  }
+
+  .code_subcat{
+    font-size:0.8rem;
+    display: block;
+    margin:0.3rem 0 0 0;
+  }
+
+  .button_subcat{
+    display:block;
+    margin:1 0;
+    padding:0.4rem;
+    font-size:1rem;
+  }
+
+
+  .spec-off-header{
+    margin-bottom: 3rem;
+  }
+
+  #contact_div{
+    width:80%;
+  }
+
+  
+}
+
+.input-control .error {
+  color: #ff3860; /* Μορφοποίηση των errors στην φόρμα εγγραφής */
+}
