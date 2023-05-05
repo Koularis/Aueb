@@ -1,0 +1,7 @@
+58 Athens 3218218 8050
+31 Amsterdam 821752 678  
+1 Manchester 510746 1200   
+124 Karditsa 56747 78     
+6 Arta 43166 5    
+
+ 
